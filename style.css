@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+:root {
+  --main-bg: hsl(233, 47%, 7%);
+  --card-bg: hsl(244, 38%, 16%);
+  --soft-accent: hsl(277, 64%, 61%);
+  --soft-accent-01: hsl(277, 76%, 40%);
+  --main-heading: hsl(0, 0%, 100%);
+  --main-para: hsla(0, 0%, 100%, 0.75);
+  --stat-heading: hsla(0, 0%, 100%, 0.6);
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+  font-family: "Lexend Deca", sans-serif;
+}
+body {
+  background-color: var(--main-bg);
+}
+
+.card-container {
+  display: flex;
+  max-width: 60%;
+  margin: 70px auto;
+  background-color: var(--card-bg);
+  box-shadow: 5px 5px 5px grey;
+  color: var(--main-para);
+  border-radius: 12px;
+  margin-bottom: 18px;
+}
+span {
+  color: var(--soft-accent);
+  font-size: 1.12em;
+}
+.sub-card-container {
+  padding: 50px;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+h1 {
+  font-family: Inter, sans-serif;
+  font-size: 1.75em;
+  padding: 10px 0;
+  color: white;
+}
+.sub-card-container > p {
+  padding: 16px 0;
+  line-height: 1.75em;
+  color: var(--main-para);
+  font-family: Lexend Deca, sans-serif;
+  font-weight: 400;
+}
+.card-stat {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding-top: 25px;
+}
+
+/* ============================Image overlay background==================== */
+img {
+  border-radius: 0 12px 12px 0;
+  width: 100vw;
+  background: var(--soft-accent);
+  overflow: hidden;
+}
+
+.img-container {
+  position: relative;
+  max-width: 100%;
+}
+.image {
+  display: block;
+  max-width: 100%;
+  height: 100%;
+}
+.overlay {
+  position: absolute;
+  border-radius: 0 12px 12px 0;
+  bottom: 0;
+  background: var(--soft-accent-01);
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+ul li {
+  font-size: 1.75em;
+  padding: 10px 0;
+  color: white;
+}
+
+li p {
+  color: var(--stat-heading);
+  text-transform: uppercase;
+  font-size: 0.45em;
+  padding: 4px 0;
+}
+/* ==================Footer====================================== */
+
+.attribution {
+  margin-top: 0;
+  font-size: 14px;
+  text-align: center;
+  color: white;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/* ===================Mobile================================== */
+@media (max-width: 375px) {
+  .card-container {
+    display: flex;
+    max-width: 90%;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .card-stat {
+    flex-direction: column;
+    max-width: 100%;
+    text-align: center;
+  }
+  img {
+    max-width: 100%;
+  }
+}
